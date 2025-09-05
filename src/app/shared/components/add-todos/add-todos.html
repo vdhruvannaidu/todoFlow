@@ -1,0 +1,53 @@
+<hlm-dialog>
+  <!-- <button brnDialogTrigger hlmBtn>Edit Profile</button> -->
+  <button id="edit-profile" brnDialogTrigger hlmBtn class="cursor-pointer bg-gradient-to-br from-blue-600 to-purple-600">
+    <i-lucide
+      [strokeWidth]="2"
+      [img]="plus"
+      class="my-icon w-5 h-5  from-blue-600 to-purple-600"
+    ></i-lucide>
+    Add Todo
+  </button>
+  <hlm-dialog-content class="sm:max-w-[425px]" *brnDialogContent="let ctx">
+    <!-- <hlm-dialog-header>
+      <h3 hlmDialogTitle>Create Todos</h3>
+      <p hlmDialogDescription>
+        Make changes to your profile here. Click save when you're done.
+      </p>
+    </hlm-dialog-header> -->
+    <div class="grid gap-4 py-4">
+      <div class="grid grid-cols-4 items-center gap-4">
+        <label hlmLabel for="name" class="text-right">Title</label>
+        <input hlmInput id="name" value="Pedro Duarte" class="col-span-3" />
+      </div>
+      <div class="grid grid-cols-4 items-center gap-4">
+        <label hlmLabel for="username" class="text-right">Description</label>
+        <!-- <input type="text" id="username" value="@peduarte" class="col-span-3" /> -->
+        <textarea class="min-h-[80px] w-full col-span-3" row="2" hlmInput placeholder="Type your message here."></textarea>
+      </div>
+      <div class="grid grid-cols-4 items-center gap-4">
+        <label hlmLabel for="username" class="text-right">Time</label>
+        <input type="date" hlmInput class="col-span-3" />
+        <!-- <textarea class="min-h-[80px] w-full" class="col-span-3" type="date" placeholder="Type your message here."></textarea> -->
+      </div>
+      <div class="grid grid-cols-4 items-center gap-4">
+        <label hlmLabel for="username" class="text-right">Priority</label>
+        <brn-select class="inline-block" placeholder="Select an option">
+          <hlm-select-trigger class="w-56">
+            <hlm-select-value />
+          </hlm-select-trigger>
+          <hlm-select-content>
+            <hlm-option value="Refresh">Priority 1</hlm-option>
+            <hlm-option value="Settings">Priority 2</hlm-option>
+            <hlm-option value="Help">Priority 3</hlm-option>
+            <hlm-option value="Signout">Priority 4</hlm-option>
+          </hlm-select-content>
+        </brn-select> 
+      </div>
+    </div>
+    <hlm-dialog-footer>
+      <button hlmBtn type="submit" variant="secondary">Cancel</button>
+      <button hlmBtn type="submit" variant="default">Add Todo</button>
+    </hlm-dialog-footer>
+  </hlm-dialog-content>
+</hlm-dialog>
