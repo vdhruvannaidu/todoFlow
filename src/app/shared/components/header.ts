@@ -32,10 +32,9 @@ import { AddTodos } from './add-todos/add-todos';
           </div>
 
           <div class="flex items-center space-x-3">
-            <button class="spartan-button spartan-button-ghost p-2">
+            <button class="spartan-button bg-slate-600 spartan-button-ghost p-2">
               <i data-lucide="moon" class="w-5 h-5"></i>
             </button>
-            <add-todos></add-todos>
           </div>
         </div>
       </div>

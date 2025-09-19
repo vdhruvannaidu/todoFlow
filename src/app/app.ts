@@ -1,42 +1,28 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
 import { HlmButtonDirective } from '@spartan-ng/helm/button';
 import { Header } from './shared/components/header';
-import {
-  LucideAngularModule,
-  UserIcon,
-  ListIcon,
-  CircleCheck,
-  Clock,
-  TriangleAlert,
-  TriangleAlertIcon,
-} from 'lucide-angular';
-
-import {
-  BrnProgressComponent,
-  BrnProgressIndicatorComponent,
-} from '@spartan-ng/brain/progress';
-import {
-  HlmProgressDirective,
-  HlmProgressIndicatorDirective,
-} from '@spartan-ng/helm/progress';
+import { LucideAngularModule, UserIcon, ListIcon, CircleCheck, Clock, TriangleAlert, TriangleAlertIcon } from 'lucide-angular';
+import { BrnProgressComponent, BrnProgressIndicatorComponent } from '@spartan-ng/brain/progress';
+import { HlmProgressDirective, HlmProgressIndicatorDirective } from '@spartan-ng/helm/progress';
 import { TodosList } from './shared/components/todos-list/todos-list';
 import { Searchbar } from './shared/components/searchbar/searchbar';
+import { AddTodos } from './shared/components/add-todos/add-todos';
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    HlmButtonDirective,
+    // HlmButtonDirective,
     Header,
     LucideAngularModule,
-    BrnProgressComponent,
-    BrnProgressIndicatorComponent,
-    HlmProgressDirective,
-    HlmProgressIndicatorDirective,
+    // BrnProgressComponent,
+    // BrnProgressIndicatorComponent,
+    // HlmProgressDirective,
+    // HlmProgressIndicatorDirective,
     TodosList,
     Searchbar,
+    AddTodos,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
