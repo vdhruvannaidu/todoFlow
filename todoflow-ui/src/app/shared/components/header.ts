@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HlmButtonDirective } from '@spartan-ng/helm/button';
-import { LucideAngularModule, Plus } from 'lucide-angular';
+import { LucideAngularModule, Moon, Plus } from 'lucide-angular';
 import { AddTodos } from './add-todos/add-todos';
 
 
@@ -33,6 +33,7 @@ import { AddTodos } from './add-todos/add-todos';
 
           <div class="flex items-center space-x-3">
             <button class="spartan-button bg-slate-600 spartan-button-ghost p-2">
+              <!-- <i data-lucide="moon" class="w-5 h-5"></i> -->
               <i data-lucide="moon" class="w-5 h-5"></i>
             </button>
           </div>
@@ -44,5 +45,6 @@ import { AddTodos } from './add-todos/add-todos';
 })
 export class Header {
     readonly plus = Plus;
+    readonly moon = Moon;
     // You can add any additional properties or methods here if needed
 }
